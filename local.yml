@@ -3,6 +3,6 @@
   become: true
 
   tasks:
-  - name : Install htop
+  - name : Install nginx
     apt:
-      name: htop
+      name: nginx
