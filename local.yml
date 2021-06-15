@@ -20,7 +20,7 @@
     state: absent
   - name: writing conf file
   ansible.builtin.copy:
-    src: /home/ubuntu/test-ansible/conf_files/default
+    src: /home/jhul/test-ansible/conf_files/default
     dest: /etc/nginx/sites-available/
     follow: yes
   - name: nginx is restarted
