@@ -5,19 +5,24 @@
 # https://www.nginx.com/resources/wiki/start/topics/tutorials/config_pitfalls/
 # https://wiki.debian.org/Nginx/DirectoryStructure
 
-upstream backend {
-	server 3.83.40.179:80;
-        server 3.84.124.143:80;
+upstream service1 {
+        server 3.84.55.226:80;
 }
 
+upstream service2 {
+        server 3.84.77.172:80;
+}
 
 server {
-	listen 80 default_server;
-	listen [::]:80 default_server;
+        listen 80 default_server;
+        listen [::]:80 default_server;
 
-	location / {
-		proxy_pass http://backend;
-	}
+        location /service1 {
+                proxy_pass http://service1;
+        }
+	
+	location /service2 {
+                proxy_pass http://service2;
+        }
 }
-
 
