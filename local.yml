@@ -1,11 +1,12 @@
-- hosts : web_proxy
-  connection : local
+- name : Test book
+  hosts : web_proxy
   remote_user: ubuntu
   become: true
-
+  
   tasks:
   - name : Install nginx
     apt:
+      update_cache: yes
       name: nginx
   - name: Starting nginx
     service:
@@ -19,7 +20,7 @@
     ansible.builtin.file:
       path: /etc/nginx/sites-available/default
       state: absent
-  - name: Writing conf file
+  - name: Writing new conf file
     ansible.builtin.copy:
       src: /home/jhul/test-ansible/conf_files/default
       dest: /etc/nginx/sites-available/
