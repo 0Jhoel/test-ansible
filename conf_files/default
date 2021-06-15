@@ -18,11 +18,11 @@ server {
         listen [::]:80 default_server;
 
         location /service1 {
-                proxy_pass http://service1;
+                proxy_pass http://service1/;
         }
 	
 	location /service2 {
-                proxy_pass http://service2;
+                proxy_pass http://service2/;
         }
 }
 
