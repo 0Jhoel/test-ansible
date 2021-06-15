@@ -6,11 +6,11 @@
 # https://wiki.debian.org/Nginx/DirectoryStructure
 
 upstream service1 {
-        server 3.84.55.226:80;
+        server 3.93.82.133:80;
 }
 
 upstream service2 {
-        server 3.84.77.172:80;
+        server 3.84.6.84:80;
 }
 
 server {
