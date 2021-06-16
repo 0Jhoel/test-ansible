@@ -1,0 +1,10 @@
+version: '1'
+services:
+  web:
+    build: ./webapp
+    image: app1_image
+    container_name: app1
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+
