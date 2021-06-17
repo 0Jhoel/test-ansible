@@ -2,9 +2,9 @@ version: '3.3'
 services:
   web:
     build: ./webapp
-    image: app1_image
-    container_name: app1
+    image: app2_image
+    container_name: app2
     restart: unless-stopped
     ports:
-      - 3000:3000
+      - 3001:3001
 
