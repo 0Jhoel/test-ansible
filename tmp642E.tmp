@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<sitemanifest>
+<IisApp path="${CODEBUILD_SRC_DIR}" managedRuntimeVersion="v4.0" />
+<setAcl path="${CODEBUILD_SRC_DIR}" setAclResourceType="Directory" />
+<setAcl path="${CODEBUILD_SRC_DIR}" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>
